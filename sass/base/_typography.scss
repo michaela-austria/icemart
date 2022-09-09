@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Overpass:wght@400;700;900&display=swap');
+
+body{
+    font-family: $font-style-overpass;
+    font-weight: $font-weight-regular;
+    line-height: 1.7;
+    color: $color-dark-1;
+}
+
+.heading-primary{
+    color: $color-white-1;
+
+    backface-visibility: hidden;
+
+    &--main{
+        display: block;
+        font-size: 12.5rem;
+        font-family: $font-style-carter;
+        letter-spacing: 0.64rem;
+        text-shadow: 10px 11px 7px rgba($color-dark-2, 0.8);
+        
+        -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+        @include responsive(tabport){
+            font-size: 18rem;
+        }
+
+        @include responsive(phone){
+            font-size: 15rem;
+        }
+    }
+
+    &--sub{
+        display: block;
+        font-size: $font-size-h5;
+        font-weight: $font-weight-black;
+        letter-spacing: $letter-spacing-default;
+        text-shadow: 6px 2px 5px $color-dark-2;
+
+       -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
+        @include responsive(tabport){
+            font-size: $font-size-h4;
+            letter-spacing: 0;
+        }
+
+        @include responsive(phone){
+            font-size: $font-size-h5;
+        }
+
+    }
+}
+
+.heading-secondary{
+    display: inline-block;
+    font-size: $font-size-h4;
+    text-transform: capitalize;
+    font-weight: $font-weight-black;
+    letter-spacing: $letter-spacing-default;
+    color: $color-primary-dark;
+    // @include text-gradient;
+    transition: all .2s;
+
+    @include responsive(tabport){
+        font-size: $font-size-h3;
+    }
+
+    @include responsive(phone){
+        font-size: $font-size-h4;
+    }
+
+    @include responsive(smallphone){
+        font-size: $font-size-h5;
+    }
+
+    &:hover{
+        -webkit-animation: pulsate-fwd 0.5s ease-in-out both;
+        animation: pulsate-fwd 0.5s ease-in-out both;
+        text-shadow: .5rem 1rem 2rem rgba($color-dark, .1);
+    }
+}
+
+.heading-tertiary{
+    font-size: $font-size-h6;
+
+    @include responsive(tabport){
+        font-size: $font-size-h4;
+    }
+}
+
+.paragraph{
+    font-size: $font-size-caption;
+    text-align: justify;
+    font-weight: $font-weight-regular;
+    letter-spacing: $letter-spacing-default;
+
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+
+    @include responsive(tabport){
+        font-size: $font-size-h6;
+    }
+
+}
+
+.footer-heading{
+    text-align: center;
+    
+    &--primary{
+        display: block;
+        font-size: $font-size-h1;
+        font-family: $font-style-carter;
+        text-shadow: 10px 11px 7px rgba($color-dark-2, 0.8);
+    }
+
+    &--sub{
+        display: block;
+        font-size: $font-size-headline;
+        font-weight: $font-weight-bold;
+    }
+}

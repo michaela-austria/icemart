@@ -1,0 +1,81 @@
+.feature-box{
+    background-color: rgba($color-white-1, .95);
+    height: 20.438rem;
+    padding: 1.5rem 3rem;
+    letter-spacing: $letter-spacing-default;
+    text-align: center;
+    border-radius: 2px;
+    // box-shadow: rgb(0 0 0 / 15%) 0px 1.5rem 4rem;
+    box-shadow: 0px 16px 6px rgba(28, 28, 0, 0.02), 0px 9px 5px rgba(28, 28, 0, 0.06), 0px 4px 4px rgba(28, 28, 0, 0.1), 0px 1px 2px rgba(28, 28, 0, 0.11), 0px 0px 0px rgba(28, 28, 0, 0.12);
+    transition: all .5s;
+
+    @include responsive(tabport){
+        height: 24rem;
+    }
+
+    @media (max-width: 41.0625em) {
+        height: 26rem;
+    }
+
+    @include responsive(phone){
+        height: 24rem;
+    }
+
+    @include responsive(smallphone){
+        height: 100%;
+    }
+
+    &__icon{
+        font-size: $font-size-h1;
+        @include text-gradient;
+
+        @include responsive(tabport){
+            font-size: 7rem;
+        }
+
+        @include responsive(smallphone){
+            font-size: 5rem;
+        }
+    }
+
+    &__headerText{
+        @include responsive(tabport){
+            font-size: $font-size-h5;
+        }
+
+        @include responsive(smallphone){
+            font-size: $font-size-h6;
+        }
+    }
+
+    &__text {
+        font-size: $font-size-headline;
+        font-weight: $font-weight-regular;
+
+        @media (max-width: 65.125em) {
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 58.325em) {
+            font-size: 1.3rem;
+        }
+
+        @include responsive(tabport){
+            font-size: $font-size-h6;
+        }
+
+        @include responsive(phone){
+            font-size: $font-size-headline;
+        }
+
+        @include responsive(smallphone){
+            font-size: $font-size-caption;
+        }
+    }
+
+    &:hover{
+        transform: translateY(-1.5rem) scale(1.03);
+        background-color: $color-white-1;
+        box-shadow: rgb($color-dark, .15) 0px 1.5rem 4rem;
+    }
+}

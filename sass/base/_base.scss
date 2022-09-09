@@ -1,0 +1,36 @@
+// Global Reset
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%; //1rem //10 px
+    scroll-behavior: smooth;
+    
+    
+    @include responsive(tabland){
+        font-size: 56.25%; 
+    }
+    
+    @include responsive(tabport){
+        font-size: 31.25%; 
+    }
+
+    @include responsive(bigdesktop){
+        font-size: 75%;
+    }
+}
+
+body{
+    box-sizing: border-box;
+    padding: 2rem;
+    background-color: $color-white-1;
+
+    @include responsive(phone){
+        padding: 0;
+    }
+}

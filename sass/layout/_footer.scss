@@ -1,0 +1,163 @@
+.footer{
+    padding: 10rem 15rem;
+    background-color: $color-dark-1;
+    color: $color-white-1;
+    letter-spacing: $letter-spacing-default;
+
+    @include responsive(tabport){
+        padding: 5rem 10rem;
+    }
+
+    &__companyInfo,
+    &__companySocial{
+        display: block;
+        width: 40%;
+        margin: 0 auto;
+
+        @include responsive(tabport){
+            width: 50%;
+        }
+
+        @include responsive(phone){
+            width: 80%;
+        }
+    }
+
+    &__companySocial {
+        font-size: $font-size-h6;
+        text-align: center;
+        
+        .icons {
+            // width: 45%;
+            width: max-content;
+            margin: 0 auto;
+
+            &__container{
+                @include clearfix;
+            }
+
+            &__icon {
+                float: left;
+                width: 4rem;
+                height: 4rem;
+                background-color: $color-white-1;
+                padding: 0.65rem 1rem 0 1rem;
+                border-radius: 100px;
+                transition: all .5s;
+
+                &:not(:last-child){
+                    margin-right: 1.5rem
+                }
+
+                .fa{
+                    @include text-gradient;
+                }
+
+                &:hover{
+                    transform: translateY(-5px);
+                    box-shadow: 0 1.5rem 4rem rgba($color-dark, .4);
+                }
+
+            }
+        }
+    }
+
+    .row{
+        font-size: $font-size-headline;
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+
+        @include responsive(phone){
+            width: 60%;
+        }
+
+        [class^="col-"]{ 
+            &:not(:last-child){
+                margin-bottom: 4rem;
+            }
+
+            @include responsive(phone){
+                width: 100% !important;
+            }
+        }
+    }
+
+
+    &__navigation{
+        border-top: 1px solid $color-white-1;
+        padding-top: 2rem;
+        display: inline-block;
+
+        @include responsive(tabport){
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @include responsive(phone){
+            width: 100%;
+        }
+    }
+
+    &__list{
+        list-style: none;
+
+        @include responsive(tabport){
+            text-align: center;
+        }
+    }
+
+    &__item{
+        display: inline-block;
+        transition: all .5s;
+
+        @include responsive(tabport){
+            text-align: center;
+        }
+        
+        &:not(:last-child){
+            margin-right: 1.5rem;
+        }
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    &__link{
+        &:link,
+        &:visited{
+            color: $color-white-1;
+            text-decoration: none;
+            transition: all .5s;
+        }
+
+        &:hover,
+        &:active{
+            color: $color-primary;
+        }
+    }
+
+    &__copyrightContainer{
+        border-top: 1px solid $color-white-1;
+        padding-top: 2rem;
+        display: inline-block;
+        float: right;
+
+        @include responsive(tabport){
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @include responsive(phone){
+            width: 100%;
+        }
+    }
+
+    &__copyright{
+        text-align: center;
+    }
+
+
+}

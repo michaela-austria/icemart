@@ -1,0 +1,189 @@
+@mixin clearfix{
+    &::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+@mixin text-gradient {
+    background-image: linear-gradient(228.65deg, #CDCD01 44.05%, #323200 155.45%);
+    // background-image: linear-gradient(228.65deg, rgba($color-primary-light, .4405), rgba($color-primary-dark, 1.5545));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@mixin clip-path{
+    @supports(clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    }
+}
+
+@mixin product-card-details($size, $weight, $color){
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin card-details($height){
+    background-color: $color-white-1;
+    .picture {
+        background-color: $color-white-1;
+        @include clip-path;
+        height: $height;
+
+        img {
+            width: 100%;
+            height: 256.500px;
+            transform: scale(1.1);
+            object-fit: cover;
+
+            @include responsive(tabport){
+                // transform: scale(1);
+                height: 100px;
+            }
+        }
+    }
+
+    .details {
+        padding: 0 1.5rem 1.5rem 1.5rem;
+
+        ul {
+            list-style: none;
+
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 4px;
+                }
+            }
+        }
+
+        %letter-spacing {
+            letter-spacing: $letter-spacing-default;
+        }
+
+        &--category {
+            @extend %letter-spacing;
+            @include product-card-details($font-size-subtitle, $font-weight-bold, $color-primary-dark);
+
+            text-transform: uppercase;
+
+            @include responsive(tabport){
+                font-size: $font-size-caption;
+            }
+
+            @include responsive(smallphone){
+                font-size: $font-size-headline;
+            }
+        }
+
+        &--name {
+            @extend %letter-spacing;
+            @include product-card-details($font-size-headline, $font-weight-bold, $color-dark-1);
+            
+            @include responsive(tabport){
+                font-size: $font-size-h5;
+            }
+
+            @include responsive(smallphone){
+                font-size: $font-size-h4;
+            }
+        }
+
+        &--price {
+            @extend %letter-spacing;
+            @include product-card-details($font-size-caption, $font-weight-regular, $color-dark-2);
+            
+            @include responsive(tabport){
+                font-size: $font-size-h6;
+            }
+
+            @include responsive(smallphone){
+                font-size: $font-size-h5;
+            }
+        }
+
+        &--review {
+            [class^="material-"] {
+                font-size: 1.5rem;
+                color: $color-primary-light;
+
+                @include responsive(tabport){
+                    font-size: 2rem;
+                }
+
+                @include responsive(smallphone){
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        &--description{
+            @extend %letter-spacing;
+            @include product-card-details($font-size-subtitle, $font-weight-regular, $color-dark-2);
+            text-align: justify;
+            height: 5rem;
+
+            @include responsive(tabport){
+                font-size: $font-size-caption;
+                height: 7rem;
+            }
+
+            @include responsive(smallphone){
+                font-size: $font-size-headline;
+            }
+        }
+    }
+}
+
+@mixin centerXY($position){
+    &{
+        position: $position;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+
+
+
+// MEDIA QUERY MANAGER
+/*
+< - 425px       Small Phone
+425px - 600px;       Phone
+600 - 900px;     Tablet portrait
+900 - 1200px;    Tablet landscape
+[1200 - 1800]    Normal Style
+1800px + ;       Big desktop
+*/
+
+@mixin responsive($breakpoint){
+    // <= 425px
+    @if $breakpoint == smallphone{
+        @media (max-width: 26.5625em){@content};
+    }
+
+    // <= 600px
+    @if $breakpoint == phone{
+        @media (max-width: 37.5em){@content}; 
+    }
+
+     // <= 900px
+    @if $breakpoint == tabport{
+        @media (max-width: 56.25em){@content};
+    }
+
+    // <= 1200px
+    @if $breakpoint == tabland{
+        @media (max-width: 75em){@content}; 
+    }
+
+    // >= 1800px
+    @if $breakpoint == bigdesktop {
+        @media (min-width: 112.5em){@content}; 
+    }
+}

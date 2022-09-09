@@ -1,0 +1,163 @@
+.btn{
+    &,
+    &:link,
+    &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        // padding: 1.5rem 3rem;
+        padding: 1.5rem 3rem 1.2rem 3rem;
+        // border-radius: 1.25rem;
+        // border-radius: 6.25rem;
+        border-radius: 2px;
+        display: inline-block;
+        font-size: 1.6rem;
+        font-weight: $font-weight-bold;
+
+        position: relative;
+        transition: all .5s;
+    }
+
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-dark-1, 0.4);
+
+        &::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active,
+    &:focus{
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 10rem rgba($color-dark-1, 0.4);
+    }
+
+    &::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        // border-radius: 1.25rem;
+        // border-radius: 6.25rem;
+        border-radius: 2px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.4s ease-out;
+    }
+
+
+
+    &--white{
+        background-color: $color-white-2;
+        color: $color-dark;
+
+        &::after{
+            background-color: $color-white-2;
+        }
+    }
+
+    &--colored{
+        // background-image: linear-gradient(to right bottom, #CDCD01 44.05%, #323200 155.45%);
+        background-image: linear-gradient(to right bottom, $color-primary, $color-primary-dark);
+        border: none;
+        border-radius: 5px;
+        color: $color-white-1;
+        letter-spacing: $letter-spacing-default;
+        width: 90%;
+        cursor: pointer;
+
+        &::after{
+            background-image: linear-gradient(to right bottom, $color-primary, $color-primary-dark);
+            border-radius: 5px;
+            border: none;
+        }
+
+    }
+}
+
+
+.btn-text{
+    font-size: $font-size-caption;
+
+    @include responsive(tabport){
+        font-size: $font-size-headline;
+    }
+
+    &:link,
+    &:visited{
+        color: $color-primary-dark;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary-dark;
+        padding: 3px;
+        transition: all .2s;
+    }
+
+    &:hover{
+        background-color: $color-primary-dark;
+        color: $color-white-2;
+        box-shadow: 0 1rem 2rem rgba($color-dark-1, 0.2);
+        transform: translateY(-2px);
+    }
+
+    &:active{
+        box-shadow: 0 0.5rem 1rem rgba($color-dark-1, 0.2);
+        transform: translateY(0);
+    }
+}
+
+.btn-buy {
+    @include responsive(tabport){
+        margin-top: 2rem;
+    }
+
+    @include responsive(smallphone){
+        margin-top: 1rem;
+    }
+
+    &:link,
+    &:visited {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+
+        text-decoration: none;
+        text-align: center;
+        font-size: $font-size-caption;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        letter-spacing: $letter-spacing-default;
+        color: $color-white-1;
+
+        background: linear-gradient(265.17deg, #C70500 -8.14%, #630200 91.04%);
+        border-radius: 5px;
+
+        transition: all .2s ease;
+
+        @include responsive(smallphone){
+            font-size: $font-size-headline;
+        }
+    }
+
+
+    &:hover {
+        box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.25);
+        transform: translateY(-2px);
+    }
+
+    &:active,
+    &:focus{
+        outline: none;
+        box-shadow: 0px 1.5px 4px 1px rgba(0, 0, 0, 0.25);
+        transform: translateY(0);
+    }
+
+    &:hover .card .card__side{
+        // transform: scale(1.5);
+        transform: translateY(-2px);
+    }
+}

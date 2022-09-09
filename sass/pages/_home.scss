@@ -1,0 +1,94 @@
+.icons{
+    &__logo-box {
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+    }
+
+    &__logo {
+        height: 9.063rem;
+    }
+}
+
+.section-features{
+    margin-top: -8rem;
+    position: relative;
+    z-index: 3;
+
+    -webkit-animation: scale-in-ver-top 0.7s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+	        animation: scale-in-ver-top 0.7s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+}
+
+.section-about{
+    height: 95rem;
+    width: auto;
+    margin-top: -12.5rem;
+    background-color: #FFFFF8;
+
+    @supports(clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    }
+
+    @include responsive(tabport){
+        height: 120rem;
+    }
+
+    @include responsive(phone){
+        height: 140rem;
+    }
+
+    .row{
+
+        [class^="col-"]{
+            @include responsive(phone){
+                width: 100% !important;
+            }
+        }
+
+        .heading-tertiary{
+            font-size: $font-size-h5;
+        }
+    }
+}
+
+.section-products{
+    background-color: $color-white-2;
+    margin-top: -9.5rem;
+    padding: 15rem 0;
+    // padding-top: 15rem;
+    // height: 160rem;
+
+    & > *:not(:last-child){
+        margin-bottom: 8rem;
+    }
+
+    .row{
+        margin-top: -5rem;
+
+        [class^="col-"]{
+            @include responsive(phone){
+                width: calc((100% - #{$gutter-horizontal}) / 3); 
+                margin: 0 8rem 4rem 8rem;
+            }
+
+            @include responsive(smallphone){
+                width: 80%;
+            }
+        }
+    }
+
+    @include responsive(tabport){
+        margin-top: -12rem;
+    }
+}
+
+.section-reviews{
+    position: relative;
+    padding: 10rem 0;
+
+    .row:not(:last-child){
+        margin-bottom: 8rem;
+    }
+}
+

@@ -1,0 +1,97 @@
+.card{
+    height: 308.969px;
+    perspective: 100rem;
+    -moz-perspective: 100rem;
+    position: relative;
+
+    @include responsive(bigdesktop){
+        height: 370px;
+    }
+
+    @include responsive(tabland){
+        height: 280px;
+    }
+
+    // @include responsive(phone){
+    //     width: 40rem;
+    // }
+    
+    
+
+    &__side{
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 0.625rem;
+        overflow: hidden; 
+        transition: all 1s ease;
+        border: 0.2px solid $color-dark-1;
+        box-shadow: 0px 16px 6px rgba(28, 28, 0, 0.02), 0px 9px 5px rgba(28, 28, 0, 0.06), 0px 4px 4px rgba(28, 28, 0, 0.1), 0px 1px 2px rgba(28, 28, 0, 0.11), 0px 0px 0px rgba(28, 28, 0, 0.12);
+
+        &--front{
+            @include card-details(20rem);
+        }
+
+        &--back{
+            transform: rotateX(-180deg);
+            
+            @include card-details(12rem);
+        }
+    }
+    
+    &:hover &__side--front{
+        transform: rotateX(180deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateX(0);
+    }
+
+
+    // @include responsive(tabport){
+    @media only screen and (max-width: 56.25em),
+           only screen and (hover:none){
+        height: auto;
+        border-radius: 0.625rem;
+        border: 0.2px solid $color-dark-1;
+        box-shadow: 0px 16px 6px rgba(28, 28, 0, 0.02), 0px 9px 5px rgba(28, 28, 0, 0.06), 0px 4px 4px rgba(28, 28, 0, 0.1), 0px 1px 2px rgba(28, 28, 0, 0.11), 0px 0px 0px rgba(28, 28, 0, 0.12);
+        overflow: hidden;
+
+        &__side{
+            height: auto;
+            position: relative;
+            border: 0;
+            
+            &--front{
+                border-radius: 0;
+                .details{
+                    padding-bottom: 0;
+                }
+            }
+
+            &--back{
+                border-radius: 0;
+                border: 0;
+                transform: rotateY(0);
+
+                .picture{display: none;}
+
+                .details{
+                    &--category,
+                    &--name,
+                    &--price{display: none !important;}
+                }
+                
+            }
+        }
+
+        &:hover &__side--front{
+            transform: rotateX(0);
+        }
+    }
+
+
+}

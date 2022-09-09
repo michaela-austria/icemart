@@ -1,0 +1,108 @@
+.review{
+    // height: 30rem;
+    margin: 0 auto;
+    padding: 4rem 6rem 6rem 8rem;
+    font-size: $font-size-headline;
+    letter-spacing: $letter-spacing-default;
+    @include clip-path;
+    background-color: rgba($color-white-2, .8);
+    // box-shadow: 0 3rem 6rem rgba($color-dark-2, .1);
+    // box-shadow: inset 11.3533px -11.3533px 11.3533px rgba(201, 201, 201, 0.6), inset 22.7067px -22.7067px 22.7067px rgba(255, 255, 255, 0.6), inset -11.3533px 11.3533px 11.3533px rgba(255, 255, 255, 0.6), inset -22.7067px 22.7067px 22.7067px rgba(201, 201, 201, 0.6);
+    transition: all .5s;
+    position: relative;
+
+    @include responsive(tabport){
+        height: 25rem;
+        font-size: $font-size-h5;
+    }
+
+    @include responsive(phone){
+        height: 23.5rem;
+        font-size: $font-size-h6;
+    }
+
+    @include responsive(smallphone){
+        height: 20rem;
+        font-size: $font-size-headline;
+    }
+
+    &__shape{
+        width: 10rem;
+        height: 10rem;
+        float: left;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        transform: translateX(-2rem);
+        
+        @include responsive(tabport){
+            width: 15rem;
+            height: 15rem;
+        }
+
+        @include responsive(smallphone){
+            width: 12rem;
+            height: 12rem;
+        }
+    }
+
+    &__img{
+        height: 100%;
+        transform: scale(1.4);
+        transition: all .5s;
+    }
+
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white-1;
+        text-transform: uppercase;
+        font-size: $font-size-caption;
+        font-weight: $font-weight-bold;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+    }
+
+    &__text{
+        margin-left: 8rem;
+        text-align: justify;
+    }
+
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__img{
+        transform: scale(1);
+        filter: blur(3px) brightness(80%);
+    }
+
+    &:hover{
+        transform: translateY(-2rem);
+    }
+}
+
+.icon {
+    font-size: 10rem;
+    position: absolute;
+    z-index: 1;
+    font-size: 12rem;
+    color: $color-primary;
+    left: 9rem;
+    opacity: 0.9;
+
+    &--1{
+        top: 4rem;
+    }
+    &--2{
+        top: 30rem;
+
+        @include responsive(tabport){
+            top: 37rem;
+        }
+    }
+}

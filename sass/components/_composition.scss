@@ -1,0 +1,79 @@
+.composition{
+    position: relative;
+    margin-top: -2rem;
+
+    @include responsive(phone){
+        margin: 4rem 0 0 3rem;
+    }
+
+    &__photo{
+        width: 29.5rem;
+        height: 18.75rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-dark, .4);
+        // border-radius:2px;
+        position: absolute;
+        z-index: 10;
+        transition: all .5s;
+        outline-offset: 1rem;
+
+        @include responsive(tabport){
+            width: 40rem;
+            height: 25rem;
+        }
+
+        @include responsive(phone){
+            float: left;
+            position: relative;
+            width: 33.333%;
+        }
+
+        &--p1{
+            right: 1rem;
+
+            @include responsive(phone){
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &--p2{
+            top: 12rem;
+            right: 20rem;
+
+            @include responsive(tabport){
+                top: 18rem;
+                right: 20rem;
+            }
+
+            @include responsive (phone){
+                top: 2rem;
+                right: 2rem;
+            }
+        }
+
+        &--p3{
+            top: 25rem;
+            right: 1rem;
+
+            @include responsive(tabport){
+                top: 40rem;
+            }
+
+            @include responsive(phone){
+                top: 4rem;
+                right: 4rem;
+            }
+        }
+
+        &:hover{
+            outline: 0.5rem double $color-primary;
+            transform: scale(1.05) translateY(-.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-dark, .5);
+            z-index: 20;
+        }
+    }
+
+    &:hover &__photo:not(:hover){
+        transform: scale(0.9);
+    }
+}

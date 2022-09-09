@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Icemart | Frozen & Ice Grocery</title>
+        <link rel="icon" type="image/x-icon" href="img/arcticons_icebox.svg">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Google Material Symbols -->
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /> -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />        
+
+        <!-- Iconify Icons -->
+        <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+
+        <!-- Fontawesome Icons -->
+        <script src="https://kit.fontawesome.com/23eff3f2a4.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="#section-about" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#section-products" class="navigation__link">Product</a></li>
+                    <li class="navigation__item"><a href="#section-reviews" class="navigation__link">Reviews</a></li>
+                    <li class="navigation__item"><a href="#contact" class="navigation__link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- <div class="icons__logo-box">
+            <img src="img/arcticons_icebox.svg" alt="logo" class="icons__logo">
+        </div> -->
+        
+        <header class="header">
+            <!-- <div class="header__logo-box">
+                <img src="img/arcticons_icebox.svg" alt="logo" class="header__logo">
+            </div> -->
+
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main">Icemart</span>
+                    <span class="heading-primary--sub">The best place to find frozen and ice grocery items!</span>
+                </h1>
+
+                <a href="#section-products" class="btn btn--white">Browse our store</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="section-features">
+                <div class="row">
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <span class="material-symbols-outlined feature-box__icon">
+                                set_meal
+                            </span>
+                            <h3 class="feature-box__headerText heading-tertiary u-margin-bottom-small">Ready Meals</h3>
+                            <p class="feature-box__text">Convenient option for busy people.</p>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <span class="material-symbols-outlined feature-box__icon">
+                                icecream
+                                </span>
+                            <h3 class="feature-box__headerText heading-tertiary u-margin-bottom-small">Desserts</h3>
+                            <p class="feature-box__text">Typically sweet and eaten at the end of a meal.</p>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <span class="material-symbols-outlined feature-box__icon">
+                                egg
+                                </span>
+                            <h3 class="feature-box__headerText heading-tertiary u-margin-bottom-small">Produce</h3>
+                            <p class="feature-box__text">Very fresh and of high quality.</p>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <span class="material-symbols-outlined feature-box__icon">
+                                local_drink
+                                </span>
+                            <h3 class="feature-box__headerText heading-tertiary u-margin-bottom-small">Beverage</h3>
+                            <p class="feature-box__text">A refreshing, icy perfect for a hot summer day.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section-about" id="section-about">
+                <div class="u-center-text u-margin-bottom-big u-padding-top-big">
+                    <h2 class="heading-secondary"> Your one stop shop for all your frozen and ice needs! </h2>
+                </div>
+                 
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <h3 class="heading-tertiary u-margin-bottom">Personalized Shopping</h3>
+                        <p class="paragraph">
+                            Personalized shopping for your ice and frozen needs is now available! Get exactly what you need without having to settle for less. Our new and improved online shopping experience offers a more convenient way to shop for all your favorite ice and frozen products.
+                        </p>
+
+                        <h3 class="heading-tertiary u-margin-bottom">Frozen Guarantee</h3>
+                        <p class="paragraph">
+                            Our products are properly frozen and will stay frozen for a minimum of 48 hours. This is a great option for those who want to be sure their food will stay fresh and delicious.
+                        </p>
+
+                        <h3 class="heading-tertiary u-margin-bottom">Community Curated</h3>
+                        <p class="paragraph">
+                            This type of store is typically small in size and offers a limited selection of products, but the products that are available are of high quality and are hand-picked by the community.
+                        </p>
+                        <a href="#" class="btn-text">Learn more &rarr;</a>
+                    </div>
+                    <div class="col-1-of-2">
+                        <div class="composition">
+                            <img srcset="img/about-img-1-small.jpg 300w, img/about-img-1.jpg 1000w"
+                                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo 1"
+                                class="composition__photo composition__photo--p1" src="img/about-img-1.jpg">
+
+                            <img srcset="img/about-img-2-small.jpg 300w, img/about-img-2.jpg 1000w"
+                                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo 2"
+                                class="composition__photo composition__photo--p2" src="img/about-img-2.jpg">
+
+                            <img srcset="img/about-img-3-small.jpg 300w, img/about-img-3.jpg 1000w"
+                                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo 3"
+                                class="composition__photo composition__photo--p3" src="img/about-img-3.jpg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-products" id="section-products"> 
+                <div class="product-category">
+                    <div class="u-center-text u-margin-bottom-big">
+                        <h2 class="heading-secondary">Most picked frozen product </h2>
+                    </div>
+
+                    <div class="row" id="mostPicked">
+                        <!-- <div class="col-1-of-4">
+                            <div class="card">
+                                <div class="card__side card__side--front">
+                                    <div class="picture">
+                                        <img src="img/product-most-picked-1.jpeg" alt="breakfast-sliders">
+                                    </div>
+                                    <div class="details">
+                                        <ul>
+                                            <li class="details--category">Ready Meals</li>
+                                            <li class="details--name">Breakfast Sliders</li>
+                                            <li class="details--price">$14.81</li>
+                                            <li class="details--review">
+                                                <span class="material-symbols-outlined">star</span>
+                                                <span class="material-symbols-outlined">star</span>
+                                                <span class="material-symbols-outlined">star</span>
+                                                <span class="material-symbols-outlined">star</span>
+                                                <span class="material-symbols-outlined">star</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card__side card__side--back">
+                                    <div class="picture">
+                                        <img src="img/product-most-picked-1.jpeg" alt="breakfast-sliders">
+                                    </div>
+                                    <div class="details">
+                                        <ul>
+                                            <li class="details--category">Ready Meals</li>
+                                            <li class="details--name">Breakfast Sliders</li>
+                                            <li class="details--price">$14.81</li>
+                                            <li class="details--description">
+                                                Stash these sliders in the freezer for a quick weekday breakfast! To reheat, remove
+                                                the foil, wrap the sandwich in a paper towel and microwave until hot.
+                                            </li>
+                                        </ul>
+                                        <a href="#signup-popup" class="btn-buy">Buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="product-category">
+                    <div class="u-center-text u-margin-bottom-big">
+                        <h2 class="heading-secondary">Dessert Favorite</h2>
+                    </div>
+
+                    <div class="row" id="mostDessert">
+                      
+                    </div>
+                </div>
+
+                <div class="product-category">
+                    <div class="u-center-text u-margin-bottom-big">
+                        <h2 class="heading-secondary">Beverages favorite</h2>
+                    </div>
+
+                    <div class="row" id="mostBeverages">
+                        
+                    </div>
+                </div>
+
+                
+            </section>
+
+            <section class="section-reviews" id="section-reviews">
+                <div class="bg-video">
+                    <video class="bg-video__content" autoplay muted loop>
+                        <source src="img/reviews-video-hd.mp4" type="video/mp4">
+                        Your browser is not supported
+                    </video>
+                </div>
+
+                <div class="row">
+                    <iconify-icon icon="ooui:quotes-ltr" class="icon icon--1"></iconify-icon>
+                    <div class="review">
+                        <figure class="review__shape">
+                            <img src="img/reviews-person-img-1.jpg" alt="person" class="review__img">
+                            <figcaption class="review__caption">Pavel Kiki</figcaption>
+                        </figure>
+                        <div class="review__text">
+                            <p>
+                                I'm not a big fan of frozen food, but I recently tried a new frozen food product that I really liked. The product is called "Breakfast Sliders." It's a frozen food product that you can cook in the microwave. It's quick and easy to make, and it's really tasty. I would definitely recommend this product to anyone who is looking for a quick and easy meal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <iconify-icon icon="ooui:quotes-ltr" class="icon icon--2"></iconify-icon>
+                    <div class="review">
+                        <figure class="review__shape">
+                            <img src="img/reviews-person-img-2.jpg" alt="person" class="review__img">
+                            <figcaption class="review__caption">Marvin McKinney</figcaption>
+                        </figure>
+                        <div class="review__text">
+                            <p>
+                                This pint of ice cream is delicious! It's the perfect balance of sweet and rich, and the flavor is amazing. The texture is also perfect - it's creamy and smooth, and melts in your mouth perfectly. I would definitely recommend this pint of ice cream to anyone!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer" id="contact">
+            <div class="footer__companyInfo u-margin-bottom-big">
+                <h1 class="footer-heading">
+                    <span class="footer-heading--primary">Icemart</span>
+                    <span class="footer-heading--sub">
+                        Come to Icemart for all your frozen and ice product needs! We have a wide selection of products to choose from, and our friendly staff is always ready to help.
+                    </span>
+                </h1>
+            </div>
+            <div class="footer__companySocial u-margin-bottom-big">
+                <h3 class="heading-tertiary u-margin-bottom">Be updated follow us on social!</h3>
+                <div class="icons">
+                    <div class="icons__container">
+                        <div class="icons__icon">
+                            <a href="#"><i class="fa fa-envelope"></i></a>
+                            <!-- <i class="fa fa-envelope"></i> -->
+                        </div>
+
+                        <div class="icons__icon">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <!-- <i class="fa fa-facebook"></i> -->
+                        </div>
+                        
+                        <div class="icons__icon">
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <!-- <i class="fa fa-twitter"></i> -->
+                        </div>
+
+                        <div class="icons__icon">
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <!-- <i class="fa fa-instagram"></i> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">Home</a></li>
+                            <li class="footer__item"><a href="#section-about" class="footer__link">About</a></li>
+                            <li class="footer__item"><a href="#section-products" class="footer__link">Product</a></li>
+                            <li class="footer__item"><a href="#section-reviews" class="footer__link">Reviews</a></li>
+                            <li class="footer__item"><a href="#contacts" class="footer__link">Contact</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="footer__copyrightContainer">
+
+                        <p class="footer__copyright">
+                            © <span class="dynamicYear">year</span> developed by michaelaangelaaustria@gmail.com
+                            <!-- Build my <a href="#" class="footer__link">Michaela</a> -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="signup-popup" id="signup-popup">
+            <div class="signup-popup__content">
+                <div class="popup">
+                    <a href="#section-products" class="popup__close">×</a>
+                    <div class="popup__form">
+                        <div class="u-margin-bottom-medium">
+                            <h2 class="heading-secondary">Start Shopping Now</h2>
+                        </div>
+
+                        <form action="#" class="form" autocomplete="off">
+                            <div class="form__group">
+                                <input type="text" class="form__input" placeholder="Full name" id="name" required>
+                                <label for="name" class="form__label">Full name</label>
+                            </div>
+
+                            <div class="form__group">
+                                <input type="email" class="form__input" placeholder="Email address" id="email" required>
+                                <label for="email" class="form__label">Email address</label>
+                            </div>
+
+                            <div class="form__group">
+                                <input type="number" class="form__input" placeholder="Phone" id="number" required>
+                                <label for="number" class="form__label">Phone Number</label>
+                            </div>
+
+                            <div class="form__group">
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="small" name="customer">
+                                    <label for="small" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        First time customer
+                                    </label>
+                                </div>
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="large" name="customer">
+                                    <label for="large" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Regular customer
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form__group">
+                                <button class="btn btn--colored">Submit &rarr;</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </body>
+</html>
