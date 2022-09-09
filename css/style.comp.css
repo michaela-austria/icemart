@@ -156,6 +156,11 @@ body {
   }
 }
 
+::selection {
+  background-color: #C7C700;
+  color: #FEFEFD;
+}
+
 body {
   font-family: "Overpass", sans-serif;
   font-weight: 400;
