@@ -18,10 +18,6 @@
     }
 
     @include responsive(phone){
-        height: 24rem;
-    }
-
-    @include responsive(smallphone){
         height: 100%;
     }
 

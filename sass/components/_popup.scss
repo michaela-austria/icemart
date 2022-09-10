@@ -61,12 +61,24 @@
                         url(/img/signup-img-big.jpg);
     }
 
+    @include responsive(smallphone){
+        background-image: linear-gradient(105deg,
+                       rgba($color-white-1, .9) 0%,
+                        rgba($color-white-1, .9) 80%,
+                        transparent 50%),
+                        url(/img/signup-img-big.jpg);
+    }
+
     &__form{
         width: 50%;
         padding: 6rem;
 
         @include responsive(tabport){
             width: 75%;
+        }
+
+        @include responsive(smallphone){
+            width: 90%;
         }
 
         .heading-secondary{
@@ -87,6 +99,11 @@
             display: inline-block;
             line-height: 1;
             transition: all .2s;
+
+            @include responsive(smallphone){
+                color: $color-dark-2;
+                font-size: $font-size-h1;
+            }
         }
 
         &:hover{

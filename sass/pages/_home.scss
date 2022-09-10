@@ -18,19 +18,39 @@
     -webkit-animation: scale-in-ver-top 0.7s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
     animation: scale-in-ver-top 0.7s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
 
+    @include responsive(smallphone){
+        margin-top: 8rem;
+    }
+
     .row {
         margin-top: -5rem;
+
+        // @include responsive (smallphone){
+        //     margin-top: 1rem;
+        // }
         // margin: 0 auto;
+        // position: relative;
 
         [class^="col-"] {
 
             @include responsive(phone) {
-                width: calc((100% - #{$gutter-horizontal}) / 3);
-                margin: 0 8rem 4rem 8rem;
+                width: 50% !important;
+                
+                margin-bottom: 4rem !important;
+
+                position: relative;
+                left: 50%;
+                transform: translate(-50%);
             }
 
             @include responsive(smallphone) {
-                width: 80% !important;
+                width: 50% !important;
+                
+                margin-bottom: 4rem !important;
+
+                position: relative;
+                left: 50%;
+                transform: translate(-50%);
             }
 
 
@@ -58,6 +78,11 @@
         height: 140rem;
     }
 
+    @include responsive(smallphone){
+        margin-top: 0;
+        height: 100%;
+    }
+
     .row{
 
         [class^="col-"]{
@@ -68,6 +93,12 @@
 
         .heading-tertiary{
             font-size: $font-size-h5;
+        }
+
+        [class^="composition"]{
+            @include responsive(smallphone){
+                display: none;
+            }
         }
     }
 }
@@ -95,6 +126,10 @@
 
             @include responsive(smallphone){
                 width: 80%;
+                margin: auto auto 4rem auto;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%);
             }
 
             

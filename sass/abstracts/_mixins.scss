@@ -31,8 +31,8 @@
     background-color: $color-white-1;
     .picture {
         background-color: $color-white-1;
-        @include clip-path;
         height: $height;
+        @include clip-path;
 
         img {
             width: 100%;
@@ -43,6 +43,10 @@
             @include responsive(tabport){
                 // transform: scale(1);
                 height: 100px;
+            }
+
+            @include responsive(smallphone){
+                height: 100%;
             }
         }
     }

@@ -87,6 +87,10 @@
         font-size: $font-size-headline;
     }
 
+    @include responsive(smallphone){
+        float: right;
+    }
+
     &:link,
     &:visited{
         color: $color-primary-dark;

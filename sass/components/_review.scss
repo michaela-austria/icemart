@@ -92,6 +92,10 @@
     left: 9rem;
     opacity: 0.9;
 
+    @include responsive(phone){
+        display: none;
+    }
+
     &--1{
         top: 4rem;
     }

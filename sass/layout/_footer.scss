@@ -44,6 +44,7 @@
                 padding: 0.65rem 1rem 0 1rem;
                 border-radius: 100px;
                 transition: all .5s;
+                position: relative;
 
                 &:not(:last-child){
                     margin-right: 1.5rem
@@ -51,6 +52,10 @@
 
                 .fa{
                     @include text-gradient;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                 }
 
                 &:hover{
@@ -68,7 +73,7 @@
         font-weight: $font-weight-bold;
 
         @include responsive(phone){
-            width: 60%;
+            width: 80%;
         }
 
         [class^="col-"]{ 
@@ -97,6 +102,7 @@
         @include responsive(phone){
             width: 100%;
         }
+        
     }
 
     &__list{

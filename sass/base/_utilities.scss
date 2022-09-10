@@ -3,7 +3,13 @@
 .u-margin-bottom{margin-bottom: 1rem !important;}
 .u-margin-bottom-small{margin-bottom: 1.5rem !important;}
 .u-margin-bottom-medium{margin-bottom: 3rem !important;}
-.u-margin-bottom-big{margin-bottom: 8rem !important;}
+.u-margin-bottom-big{
+    margin-bottom: 8rem !important;
+
+    // @include responsive(smallphone){
+    //     margin-bottom: 5rem !important;
+    // }
+}
 
 .u-margin-top-big{margin-top: 8rem !important;}
 .u-margin-top-huge{margin-top: 10rem !important;}
@@ -12,6 +18,6 @@
     padding-top: 25rem !important;
 
     @include responsive(smallphone){
-        padding-top: 20rem !important;
+        padding-top: 3rem !important;
     }
 }
