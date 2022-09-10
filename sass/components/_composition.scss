@@ -17,8 +17,9 @@
         outline-offset: 1rem;
 
         @include responsive(tabport){
-            width: 40rem;
-            height: 25rem;
+            // width: 40rem;
+            // height: 25rem;
+            width: 33.333%;
         }
 
         @include responsive(phone){

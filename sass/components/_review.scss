@@ -1,5 +1,5 @@
 .review{
-    // height: 30rem;
+    height: auto;
     margin: 0 auto;
     padding: 4rem 6rem 6rem 8rem;
     font-size: $font-size-headline;
@@ -12,17 +12,14 @@
     position: relative;
 
     @include responsive(tabport){
-        height: 25rem;
         font-size: $font-size-h5;
     }
 
     @include responsive(phone){
-        height: 23.5rem;
         font-size: $font-size-h6;
     }
 
     @include responsive(smallphone){
-        height: 20rem;
         font-size: $font-size-headline;
     }
 
